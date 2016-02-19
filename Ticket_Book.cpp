@@ -4,7 +4,7 @@ Ticket_Book::Ticket_Book(Performance *performance) :
 performance(*performance) {
     Venue *venue = performance->getVenue();
     int numOfRows = venue->getNumberOfSeatRows();
-    int numOfSeats = venue->Capacity();
+    numOfSeats = venue->Capacity();
     
     
     /* Tried this, wasn't working, so commented it out.
@@ -13,6 +13,8 @@ performance(*performance) {
     
     
     // for each seat row in this performance
+    cout << "Number of Rows" << numOfRows << endl;
+    cout << "Number of Seats" << numOfSeats << endl;
     for(int i=0; i<numOfRows; i++) {
         // for each seat in this seat row
         for(int j=0; j < (numOfSeats/numOfRows); j++) {
@@ -33,7 +35,7 @@ performance(*performance) {
 };
 
 void Ticket_Book::Display() const {
-    cout << "Hello World Please Work!" << numOfSeats << endl;
+    cout << "Hello World Please Work!" << this->numOfSeats << endl;
     for(int i=0; i<numOfSeats; i++) {
         cout << "Hello world!";
         cout << "Performance: " << tickets[i]->getPerformance().getPerformanceName() << endl;
