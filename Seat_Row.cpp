@@ -6,7 +6,7 @@ using namespace std;
 
 Seat_Row::Seat_Row(const string Row_Name) :
     row_name(Row_Name),
-    number_of_seats(4)
+    number_of_seats(0)
 {}
 
 void Seat_Row::Add_Seat(const Seat* new_seat)

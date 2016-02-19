@@ -22,7 +22,7 @@ public:
     int Capacity() const;     // Number of seats
     void Display() const;
     int getNumberOfSeatRows();
-//    const Seat* getSeatFromVenue(int seatNum) const;
+    const Seat* getSeatFromVenue(int seatNum) const;
     const Address* getAddress();
     const Seat_Row getSeatRow(int seatRowNum);
 };

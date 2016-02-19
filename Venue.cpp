@@ -1,4 +1,4 @@
-#include <string.h>
+#include <string>
 #include <iostream>
 #include <cassert>
 #include "Venue.h"
@@ -31,10 +31,10 @@ int Venue::getNumberOfSeatRows() {
     return number_of_seat_rows;
 }
 //
-//const Seat* Venue::getSeatFromVenue(int seatNum) const {
-//    const Seat* theSeat = seat_rows[seatNum]->getSeat(seatNum);
-//    return theSeat;
-//}
+const Seat* Venue::getSeatFromVenue(int seatNum) const {
+    const Seat* theSeat = seat_rows[seatNum]->getSeat(seatNum);
+    return theSeat;
+}
 
 const Seat_Row Venue::getSeatRow(int seatRowNum) {
     return *seat_rows[seatRowNum];

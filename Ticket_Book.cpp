@@ -13,23 +13,23 @@ performance(*performance) {
     
     
     // for each seat row in this performance
-//    for(int i=0; i<numOfRows; i++) {
-//        // for each seat in this seat row
-//        for(int j=0; j < (numOfSeats/numOfRows); j++) {
-//            const Seat seat = *venue->getSeatRow(i).getSeat(j);
-//            // I need to create a Ticket object and save it to tickets array
-//            tickets[j] = new Ticket(performance, &seat);
-//        }
-    
-//    };
-    
-    
     for(int i=0; i<numOfRows; i++) {
-        const Seat_Row seatRow = venue->getSeatRow(i);
-        for(int j=0; j<seatRow.getNumberOfSeats(); j++) {
-            tickets[j] = new Ticket(performance, seatRow.getSeat(j));
+        // for each seat in this seat row
+        for(int j=0; j < (numOfSeats/numOfRows); j++) {
+            const Seat seat = *venue->getSeatRow(i).getSeat(j);
+            // I need to create a Ticket object and save it to tickets array
+            tickets[j] = new Ticket(performance, &seat);
         }
+    
     };
+    
+    
+//    for(int i=0; i<numOfRows; i++) {
+//        const Seat_Row seatRow = venue->getSeatRow(i);
+//        for(int j=0; j<seatRow.getNumberOfSeats(); j++) {
+//            tickets[j] = new Ticket(performance, seatRow.getSeat(j));
+//        }
+//    };
 };
 
 void Ticket_Book::Display() const {
