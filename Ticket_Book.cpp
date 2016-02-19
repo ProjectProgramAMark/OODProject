@@ -5,7 +5,7 @@ performance(*performance) {
     Venue *venue = performance->getVenue();
     int numOfRows = venue->getNumberOfSeatRows();
     numOfSeats = venue->Capacity();
-    
+    int counter = 0;
     
     /* Tried this, wasn't working, so commented it out.
      * The problem was that for some reason number of seats I guess is 0.
@@ -16,23 +16,13 @@ performance(*performance) {
     cout << "Number of Rows" << numOfRows << endl;
     cout << "Number of Seats" << numOfSeats << endl;
     for(int i=0; i<numOfRows; i++) {
-        // for each seat in this seat row
-        for(int j=0; j < (numOfSeats/numOfRows); j++) {
-            const Seat seat = *venue->getSeatRow(i).getSeat(j);
-            // I need to create a Ticket object and save it to tickets array
-            tickets[j] = new Ticket(performance, &seat);
-        }
+        Seat_Row seatRow = venue->getSeatRow(i);
+        for (int j = 0; j<seatRow.getNumberOfSeats(); ++j) {
+            tickets[counter++] = new Ticket(performance, seatRow.getSeat(j));
+        };
+    }
     
     };
-    
-    
-//    for(int i=0; i<numOfRows; i++) {
-//        const Seat_Row seatRow = venue->getSeatRow(i);
-//        for(int j=0; j<seatRow.getNumberOfSeats(); j++) {
-//            tickets[j] = new Ticket(performance, seatRow.getSeat(j));
-//        }
-//    };
-};
 
 void Ticket_Book::Display() const {
     cout << "Hello World Please Work!" << this->numOfSeats << endl;
