@@ -17,8 +17,7 @@ void Ticket::Display() const {
     // Seat_Row has an array of Seats
     cout << "Performance: " << this->getPerformance().getPerformanceName() << endl;
     When *dateTime = &this->getPerformance().getPerformanceWhen();
-    cout << "This is datetime: " << &dateTime << endl;
-    cout << dateTime->month << "/" << dateTime->day << "/" << dateTime->year << " at" << dateTime->hour << ":" << dateTime->minute;
+    cout << dateTime->month << "/" << dateTime->day << "/" << dateTime->year << " at " << dateTime->hour << ":" << dateTime->minute;
     cout << endl;
     const Address* address = this->getPerformance().getVenue()->getAddress();
     // Displaying seat row name and number

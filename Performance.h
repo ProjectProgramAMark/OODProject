@@ -18,7 +18,7 @@ class Performance {
 private:
     std::string show_name;
     Venue *venue;
-    When *when;
+    When when;
 public:
     Performance(std::string show_name, Venue* venue, When* when);
     Venue* getVenue();

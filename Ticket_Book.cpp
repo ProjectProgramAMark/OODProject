@@ -10,8 +10,8 @@ performance(*performance) {
     
     
     // for each seat row in this performance
-    cout << "Number of Rows" << numOfRows << endl;
-    cout << "Number of Seats" << numOfSeats << endl;
+//    cout << "Number of Rows" << numOfRows << endl;
+//    cout << "Number of Seats" << numOfSeats << endl;
     for(int i=0; i<numOfRows; i++) {
         Seat_Row seatRow = venue->getSeatRow(i);
         for (int j = 0; j<seatRow.getNumberOfSeats(); ++j) {

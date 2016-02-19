@@ -4,7 +4,7 @@ using namespace std;
 
 Performance::Performance(string show_name, Venue* venue, When *when) :
 show_name(show_name), venue(venue) {
-    this->when = when;
+    this->when = *when;
 }
 
 Venue* Performance::getVenue() {
@@ -16,5 +16,5 @@ string Performance::getPerformanceName() {
 }
 
 When& Performance::getPerformanceWhen() {
-    return *when;
+    return when;
 }
