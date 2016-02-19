@@ -11,7 +11,8 @@ private:
     bool sold;
 public:
     Ticket(Performance *performance, const Seat *seat);
-    Performance getPerformance();
+    Performance getPerformance() const;
+    void Display() const;
 };
 
 #endif /* Ticket_h */

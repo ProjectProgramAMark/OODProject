@@ -12,6 +12,7 @@ private:
     Performance performance;
     int numOfRows;
     int numOfSeats;
+    int counter;
 public:
     Ticket_Book(Performance *performance);
     void Display() const;

@@ -1,15 +1,12 @@
 #include "Ticket_Book.h"
 using namespace std;
+
 Ticket_Book::Ticket_Book(Performance *performance) :
 performance(*performance) {
     Venue *venue = performance->getVenue();
     int numOfRows = venue->getNumberOfSeatRows();
     numOfSeats = venue->Capacity();
-    int counter = 0;
-    
-    /* Tried this, wasn't working, so commented it out.
-     * The problem was that for some reason number of seats I guess is 0.
-     * Idk why */
+    counter = 0;
     
     
     // for each seat row in this performance
@@ -26,14 +23,7 @@ performance(*performance) {
 
 void Ticket_Book::Display() const {
     cout << "Hello World Please Work!" << this->numOfSeats << endl;
-    for(int i=0; i<numOfSeats; i++) {
-        cout << "Hello world!";
-        cout << "Performance: " << tickets[i]->getPerformance().getPerformanceName() << endl;
-        When dateTime = tickets[i]->getPerformance().getPerformanceWhen();
-        cout << dateTime.month << "/" << dateTime.day << "/" << dateTime.year << " at" << dateTime.hour << ":" << dateTime.minute;
-        cout << endl;
-        const Address* address = tickets[i]->getPerformance().getVenue()->getAddress();
-        address->Display();
+    for(int i=0; i<counter; i++) {
         tickets[i]->getPerformance().getVenue()->getSeatRow(i).getSeat(i);
         
     };
