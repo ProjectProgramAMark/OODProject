@@ -15,6 +15,6 @@ string Performance::getPerformanceName() {
     return show_name;
 }
 
-When Performance::getPerformanceWhen() {
+When& Performance::getPerformanceWhen() {
     return *when;
 }

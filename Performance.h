@@ -23,7 +23,7 @@ public:
     Performance(std::string show_name, Venue* venue, When* when);
     Venue* getVenue();
     std::string getPerformanceName();
-    When getPerformanceWhen();
+    When& getPerformanceWhen();
 
 };
 #endif /* Performance_h */

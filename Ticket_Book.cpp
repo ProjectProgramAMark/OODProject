@@ -22,7 +22,7 @@ performance(*performance) {
     };
 
 void Ticket_Book::Display() const {
-    cout << "Hello World Please Work!" << this->numOfSeats << endl;
+    //cout << "Hello World Please Work!" << this->numOfSeats << endl;
     for(int i=0; i<counter; i++) {
         tickets[i]->Display();
         
